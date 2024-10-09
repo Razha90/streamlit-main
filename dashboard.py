@@ -68,7 +68,7 @@ safety_limits = {
 }
 #Keterangan (1. a adalah inepeksi PM2.5 b adalah PM10 2. kode an adalah anual kode ma adalah nilai maksimal)
 #Grafik pengecekan partikulat
-fig = px.line(hasil, x='peta waktu', y=['PM2.5', 'PM10'],
+fig = px.line(hasil, x='datetime', y=['PM2.5', 'PM10'],
               labels={'Nilai': 'Kadar Partikulat', 'peta waktu': 'Tanggal'},
               title='Inspeksi Partikulat')
 #Inspeksi Batas Aman
@@ -100,7 +100,7 @@ sulplim = {'anual': 40, 'maksimal': smax} #Sulfur dioksida
 
 #Pemeriksaan senyawa CO
 #Grafik pengecekan senyawa karbon monoksida (CO)
-fig = px.line(hasil, x='peta waktu', y=['CO'],
+fig = px.line(hasil, x='datetime', y=['CO'],
               labels={'Nilai': 'Konsentrasi CO', 'peta waktu': 'Tanggal'},
               title='Inspeksi Partikulat')
 #Inspeksi Batas Aman
@@ -123,7 +123,7 @@ else:
 #-----------------------------------------------
 #Inspeksi senyawa Ozon (Grafik inspeksi O3)
 #Grafik pengecekan senyawa Ozon (O3)
-fig = px.line(hasil, x='peta waktu', y=['O3'],
+fig = px.line(hasil, x='datetime', y=['O3'],
               labels={'Nilai': 'Konsentrasi ozon', 'peta waktu': 'Tanggal'},
               title='Inspeksi Senyawa ozon')
 #Inspeksi Batas Aman
@@ -147,7 +147,7 @@ else:
 #----------------------------------
 #Inspeksi senyawa Nitrogen dioksida (Grafik inspeksi NO2)
 #Grafik pengecekan senyawa Nitrogen Dioksida (NO2)
-fig = px.line(hasil, x='peta waktu', y=['NO2'],
+fig = px.line(hasil, x='datetime', y=['NO2'],
               labels={'Nilai': 'Konsentrasi NO2', 'peta waktu': 'Tanggal'},
               title='Inspeksi Partikulat')
 #Inspeksi Batas Aman
